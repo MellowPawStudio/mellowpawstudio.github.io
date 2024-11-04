@@ -1,7 +1,7 @@
 #link-container {
     width: 35%;
     margin: auto;
-    margin-top: 8vh;
+    margin-top: 1vh;
     padding: var(--spacing-large);
     border-radius: 24px;
     background-color: var(--theme-background-link-container);
@@ -17,12 +17,14 @@
     font-family: var(--font-family-primary);
     font-size: var(--font-size-small);
     background-color: var(--theme-background-link-btn);
-    border-radius: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000036;
     transition: 0.3s;
 }
 
 .link-btn:hover {
-    box-shadow: 0 0 20px #00000054;
+    box-shadow: 0 0 14px #0000006c;
+    scale: 1.01;
 }
 
 .copy-btn {
