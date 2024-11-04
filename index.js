@@ -18,12 +18,16 @@ function copyToClipboard(event, url) {
     });
 }
 
-function navigateTo(url) {
-    window.location.href = url;
+function navigateTo(event, url) {
+    if (event.button === 0) {
+        window.location.href = url;
+    } else if (event.button === 1) {
+        window.open(url, '_blank');
+    }
 }
 
-document.getElementById('navto-etsy').addEventListener('click', () => navigateTo("https://mellowpawstudio.etsy.com"));
-document.getElementById('navto-bsky').addEventListener('click', () => navigateTo("https://bsky.app/profile/mannyvalentine.bsky.social"));
+document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://mellowpawstudio.etsy.com"));
+document.getElementById('navto-bsky').addEventListener('mouseup', (event) => navigateTo(event, "https://bsky.app/profile/mannyvalentine.bsky.social"));
 
 document.getElementById("copy-etsy").addEventListener("click", (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
 document.getElementById("copy-bsky").addEventListener("click", (event) => copyToClipboard(event, "https://bsky.app/profile/mannyvalentine.bsky.social"));
