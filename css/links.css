@@ -1,0 +1,40 @@
+#link-container {
+    width: 35%;
+    margin: auto;
+    margin-top: 8vh;
+    padding: var(--spacing-large);
+    border-radius: 24px;
+    background-color: var(--theme-background-link-container);
+}
+
+.link-btn {
+    justify-items: center;
+    cursor: pointer;
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-medium);
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
+    background-color: var(--theme-background-link-btn);
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.link-btn:hover {
+    box-shadow: 0 0 20px #00000054;
+}
+
+.copy-btn {
+    float: right;
+}
+
+.copy-btn img {
+    padding: var(--spacing-xs);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.copy-btn img:hover {
+    background-color: var(--theme-copy-btn-hover);
+}
