@@ -11,11 +11,13 @@ function showSnackBar() {
 
 function copyToClipboard(event, url) {
     event.stopPropagation();
-    navigator.clipboard.writeText(url).then(() => {
-      showSnackBar();
-    }).catch((err) => {
-      console.error("Failed to copy text: ", err);
-    });
+    if (event.button === 0) {
+        navigator.clipboard.writeText(url).then(() => {
+            showSnackBar();
+          }).catch((err) => {
+            console.error("Failed to copy text: ", err);
+          });
+    }
 }
 
 function navigateTo(event, url) {
@@ -29,5 +31,5 @@ function navigateTo(event, url) {
 document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://mellowpawstudio.etsy.com"));
 document.getElementById('navto-bsky').addEventListener('mouseup', (event) => navigateTo(event, "https://bsky.app/profile/mannyvalentine.bsky.social"));
 
-document.getElementById("copy-etsy").addEventListener("click", (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
-document.getElementById("copy-bsky").addEventListener("click", (event) => copyToClipboard(event, "https://bsky.app/profile/mannyvalentine.bsky.social"));
+document.getElementById("copy-etsy").addEventListener("mouseup", (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
+document.getElementById("copy-bsky").addEventListener("mouseup", (event) => copyToClipboard(event, "https://bsky.app/profile/mannyvalentine.bsky.social"));
