@@ -75,14 +75,12 @@ nav {
 
 .copy-btn img {
     padding: var(--spacing-xs);
-    border: 3px black;
-    border-radius: 6px;
-    background-color: #0000002f;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
 .copy-btn img:hover {
-    box-shadow: 0 0 6px #0000009f;
+    background-color: #ffffff3b;
 }
 
 /* Snackbar */
