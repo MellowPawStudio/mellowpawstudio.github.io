@@ -1,0 +1,14 @@
+{
+  "name": "mellowpawstudio",
+  "version": "1.0.0",
+  "description": "Link page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}

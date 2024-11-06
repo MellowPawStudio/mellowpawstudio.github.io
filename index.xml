@@ -1,0 +1,14 @@
+<page>
+    <title>Mellow Paw Studio</title>
+    <handle>MellowPawStudio</handle>
+    <links>
+        <link>
+            <text>Etsy</text>
+            <url>https://www.etsy.com/</url>
+        </link>
+        <link>
+            <text>Youtube</text>
+            <url>https://Youtube.com</url>
+        </link>
+    </links>
+</page>
