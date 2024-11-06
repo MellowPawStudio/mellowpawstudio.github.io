@@ -5,7 +5,7 @@
   "description": "Link page",
   "main": "index.js",
   "scripts": {
-    "build": "xml-to-linkpage . .",
+    "build": "xml-to-linkpage . ./build",
     "deploy": "gh-pages -d build"
   },
   "author": "",
