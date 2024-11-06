@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "xml-to-linkpage": "^1.0.2"
+    "xml-to-linkpage": "^1.0.3"
   }
 }
