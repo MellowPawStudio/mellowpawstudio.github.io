@@ -9,5 +9,8 @@
     "deploy": "gh-pages -d build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xml-to-linkpage": "^1.0.2"
+  }
 }
