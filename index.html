@@ -189,11 +189,11 @@ function navigateTo(event, url) {
         window.open(url, '_blank');
     }
 }
-        document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://www.etsy.com/"));
-        document.getElementById('copy-etsy').addEventListener('mouseup', (event) => copyToClipboard(event, "https://www.etsy.com/"));
+        document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://mellowpawstudio.etsy.com"));
+        document.getElementById('copy-etsy').addEventListener('mouseup', (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
 
-        document.getElementById('navto-youtube').addEventListener('mouseup', (event) => navigateTo(event, "https://Youtube.com"));
-        document.getElementById('copy-youtube').addEventListener('mouseup', (event) => copyToClipboard(event, "https://Youtube.com"));
+        document.getElementById('navto-bsky').addEventListener('mouseup', (event) => navigateTo(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
+        document.getElementById('copy-bsky').addEventListener('mouseup', (event) => copyToClipboard(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
 </script>
 </head>
 <body>
@@ -213,9 +213,9 @@ function navigateTo(event, url) {
                 <img type="image/png" src="./img/copy.png" width="16px" />
             </div>
         </div>
-        <div id="navto-youtube" class="link-btn">
-            Youtube
-            <div id="copy-youtube" class="copy-btn">
+        <div id="navto-bsky" class="link-btn">
+            Bsky
+            <div id="copy-bsky" class="copy-btn">
                 <img type="image/png" src="./img/copy.png" width="16px" />
             </div>
         </div>
