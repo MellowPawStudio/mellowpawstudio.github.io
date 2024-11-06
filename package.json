@@ -1,14 +1,13 @@
 {
   "name": "mellowpawstudio",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "homepage": "https://mellowpawstudio.github.io/",
   "description": "Link page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "xml-to-linkpage . .",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^6.2.0"
-  }
+  "license": "ISC"
 }
