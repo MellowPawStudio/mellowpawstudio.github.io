@@ -4,22 +4,56 @@
 <head>
     <title>Mellow Paw Studio</title>
     <style>
-/* Vars */
+
+
 :root {
-    --font-size-small: 1.3em;
-    --font-size-large: 2em;
+--font-size-small: 1.3em;
+--font-size-large: 2em;
+--spacing-xs: 4px;
+--spacing-small: 12px;
+--spacing-medium: 16px;
+--spacing-large: 24px;
+--spacing-xl: 10vh;
+--font-family-primary: Inter, sans-serif;
+--theme-background-main: #faddf2;
+--theme-background-link-btn: #f4aed1;
+--theme-copy-btn-hover: #ffffff3b;
+--theme-color-main: #000000;
+--theme-color-link-btn: #000000;
+--copy-btn-size: 20px;
+--logo-size: ;
+}
 
-    --spacing-xs: 4px;
-    --spacing-small: 12px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
-    --spacing-xl: 10vh;
+@media only screen and (max-width: 1000px) {
+    :root {
+        --font-size-small: 4em !important;
+        --font-size-large: 6em !important;
+    }
 
-    --font-family-primary: Inter, sans-serif;
+    #header, #link-container {
+        width: 90% !important;
+    }
 
-    --theme-background-main: #faddf2;
-    --theme-background-link-btn: #f4aed1;
-    --theme-copy-btn-hover: #ffffff3b;
+    .header-logo {
+        height: 200px !important;
+    }
+
+    #snackbar {
+        left: 25% !important;
+        width: 75% !important;
+    }
+
+    .snackbar-img {
+        height: 60px !important;
+    }
+
+    .link-btn {
+        margin-top: calc(var(--spacing-medium) * 2) !important;
+    }
+
+    .copy-btn-img {
+        width: 60px !important;
+    }
 }
 
 /* General */
@@ -32,13 +66,22 @@ a {
     color: black;
 }
 
+body {
+    justify-content: center;
+}
+
 #header {
     text-align: center;
     width: 35%;
     margin: auto;
     margin-top: 10vh;
+    color: var(--theme-color-main);
     font-family: var(--font-family-primary);
     font-size: var(--font-size-large);
+}
+
+.header-logo {
+    height: 100px;
 }
 
 /* Utilities */
@@ -66,9 +109,7 @@ a {
     margin-top: var(--spacing-medium);
     padding: var(--spacing-medium);
     text-align: center;
-    font-weight: 400;
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-small);
+    color: var(--theme-color-link-btn);
     background-color: var(--theme-background-link-btn);
     border-radius: 8px;
     box-shadow: 0 0 10px #00000036;
@@ -80,14 +121,24 @@ a {
     scale: 1.01;
 }
 
-.copy-btn {
-    float: right;
+.link-text {
+    display: inline;
+    font-weight: 400;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
 }
 
-.copy-btn img {
+.copy-btn-img {
+    display: inline;
+    width: var(--font-size-small);
     padding: var(--spacing-xs);
-    border-radius: 8px;
+    margin: calc(var(--spacing-xs) * -1);
+    border-radius: 4px;
     transition: 0.3s;
+}
+
+.copy-btn {
+    float: right;
 }
 
 .copy-btn img:hover {
@@ -101,13 +152,23 @@ a {
     left: 50%;
     min-width: 250px;
     margin-left: -125px;
-    padding: 16px;
+    padding: var(--spacing-medium);
     text-align: center;
-    font-family: var(--font-family-primary);
     border-radius: 2px;
     background-color: var(--theme-background-link-btn);
     z-index: 1;
     visibility: hidden;
+}
+
+.snackbar-img {
+    display: inline;
+    height: var(--font-size-small);
+}
+
+.snackbar-text {
+    display: inline;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
 }
 
 #snackbar.show {
@@ -162,7 +223,8 @@ a {
         top: 0;
         opacity: 0;
     }
-}</style>
+}
+    </style>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <script type="module" defer>
 function showSnackBar() {
@@ -189,34 +251,39 @@ function navigateTo(event, url) {
         window.open(url, '_blank');
     }
 }
-        document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://mellowpawstudio.etsy.com"));
-        document.getElementById('copy-etsy').addEventListener('mouseup', (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
+document.getElementById('navto-etsy').addEventListener('mouseup', (event) => navigateTo(event, "https://mellowpawstudio.etsy.com"));
+document.getElementById('copy-etsy').addEventListener('mouseup', (event) => copyToClipboard(event, "https://mellowpawstudio.etsy.com"));
 
-        document.getElementById('navto-bsky').addEventListener('mouseup', (event) => navigateTo(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
-        document.getElementById('copy-bsky').addEventListener('mouseup', (event) => copyToClipboard(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
+document.getElementById('navto-bsky').addEventListener('mouseup', (event) => navigateTo(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
+document.getElementById('copy-bsky').addEventListener('mouseup', (event) => copyToClipboard(event, "https://bsky.app/profile/mellowpawstudio.bsky.social"));
 </script>
 </head>
 <body>
     <span id="snackbar">
-        <img type="image/png" src="./img/clipboard.png" height="20px" />
-        Copied to Clipboard
+        <img class="snackbar-img" src="./img/clipboard.png" />
+        <div class="snackbar-text">
+            Copied to Clipboard
+        </div>
     </span>
     <div id="header">
-        <img type="image/png" src="./img/logo.png" height="100vh" alt="The logo for Mellow Paw Studio." />
-        <div>@MellowPawStudio</div>
+        <img class="header-logo" src="./img/logo.png" alt="The logo for Mellow Paw Studio." />
+        <div>MellowPawStudio</div>
     </div>
     <div id="link-container" class="prevent-select">
-        
-        <div id="navto-etsy" class="link-btn">
-            Etsy
+        <div id="navto-etsy" class="link-btn" title="https://mellowpawstudio.etsy.com">
+            <div class="link-text">
+                Etsy
+            </div>
             <div id="copy-etsy" class="copy-btn">
-                <img type="image/png" src="./img/copy.png" width="16px" />
+                <img class="copy-btn-img" src="./img/copy.png" />
             </div>
         </div>
-        <div id="navto-bsky" class="link-btn">
-            Bsky
+        <div id="navto-bsky" class="link-btn" title="https://bsky.app/profile/mellowpawstudio.bsky.social">
+            <div class="link-text">
+                Bsky
+            </div>
             <div id="copy-bsky" class="copy-btn">
-                <img type="image/png" src="./img/copy.png" width="16px" />
+                <img class="copy-btn-img" src="./img/copy.png" />
             </div>
         </div>
     </div>
