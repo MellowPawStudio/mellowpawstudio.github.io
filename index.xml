@@ -11,4 +11,10 @@
             <url>https://bsky.app/profile/mellowpawstudio.bsky.social</url>
         </link>
     </links>
+    <styles>
+        <var name="--theme-background-main">#faddf2</var>
+        <var name="--theme-background-link-btn">#f4aed1</var>
+        <var name="--theme-color-main">#000000</var>
+        <var name="--theme-color-link-btn">#000000</var>
+    </styles>
 </page>
