@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "xml-to-linkpage": "^1.0.3"
+    "xml-to-linkpage": "^1.1.1"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
