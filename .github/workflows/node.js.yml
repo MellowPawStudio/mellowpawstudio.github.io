@@ -33,6 +33,7 @@ jobs:
       run: |
         cp img/favicon.png build/img/favicon.png
         cp img/logo.png build/img/logo.png
+        cp CNAME build/CNAME
 
     - name: Deploy with gh-pages
       run: |
