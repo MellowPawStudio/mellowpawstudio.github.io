@@ -29,10 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-    - name: Copy images to build folder
+    - name: Copy files to build folder
       run: |
         cp img/favicon.png build/img/favicon.png
         cp img/logo.png build/img/logo.png
+        cp CNAME CNAME
 
     - name: Deploy with gh-pages
       run: |
